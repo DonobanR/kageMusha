@@ -1,0 +1,26 @@
+{
+    "query_status": "ok",
+    "data": [
+        {
+            "id": "2037211",
+            "ioc": "e39950f0b39918d0fb7e880932f73812",
+            "threat_type": "payload",
+            "threat_type_desc": "Indicator that identifies a malware sample (payload)",
+            "ioc_type": "md5_hash",
+            "ioc_type_desc": "MD5 hash of a malware sample (payload)",
+            "malware": "win.zstealer",
+            "malware_printable": "ZStealer",
+            "malware_alias": "Z*Stealer",
+            "malware_malpedia": "https:\/\/malpedia.caad.fkie.fraunhofer.de\/details\/win.zstealer",
+            "confidence_level": 95,
+            "is_compromised": false,
+            "first_seen": "2026-11-21 02:45:36 UTC",
+            "last_seen": null,
+            "reference": null,
+            "reporter": "Grim",
+            "sightings": 1,
+            "tags": null,
+            "malware_samples": []
+        }
+    ]
+}

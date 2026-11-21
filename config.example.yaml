@@ -1,0 +1,10 @@
+# Kagemusha configuration
+# Copy to config.yaml and fill in your keys.
+
+# abuse.ch Auth-Key (required for URLhaus and ThreatFox)
+# Get yours at: https://auth.abuse.ch/
+abusech_auth_key: ""
+
+# AlienVault OTX API key (optional, improves coverage)
+# Get yours at: https://otx.alienvault.com/api
+otx_api_key: ""

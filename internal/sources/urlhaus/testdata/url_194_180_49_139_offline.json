@@ -1,0 +1,38 @@
+{
+    "query_status": "ok",
+    "id": "2715925",
+    "urlhaus_reference": "https:\/\/urlhaus.abuse.ch\/url\/2715925\/",
+    "url": "http:\/\/194.180.49.139\/f2q2kke5aadloo4aasdjjjfirbmw\/0xh0roxxnavebusyoo.arm7",
+    "url_status": "offline",
+    "host": "194.180.49.139",
+    "date_added": "2023-10-02 18:23:05 UTC",
+    "last_online": "2023-10-03 20:XX:XX UTC",
+    "threat": "malware_download",
+    "blacklists": {
+        "spamhaus_dbl": "not listed",
+        "surbl": "not listed"
+    },
+    "reporter": "tolisec",
+    "larted": "true",
+    "takedown_time_seconds": "94113",
+    "tags": [
+        "elf",
+        "mirai"
+    ],
+    "payloads": [
+        {
+            "firstseen": "2023-10-02",
+            "filename": null,
+            "file_type": "elf",
+            "response_size": "137680",
+            "response_md5": "fefebe52db341a139da7e88d8d63b579",
+            "response_sha256": "bd1b6c5d9e0b10c346bb5cec424e5a62f826d2b75b37ba91d3ac202baecf31da",
+            "urlhaus_download": "https:\/\/urlhaus-api.abuse.ch\/v1\/download\/bd1b6c5d9e0b10c346bb5cec424e5a62f826d2b75b37ba91d3ac202baecf31da\/",
+            "signature": "Mirai",
+            "virustotal": null,
+            "imphash": null,
+            "ssdeep": "3072:7q6kTgG9C2rrF95hGfAF2rcJuIzlkaN3HM\/9J6mC:WdgGVrF9ufAF2rcQIuaNXM\/9J6mC",
+            "tlsh": "T1DDD35C46EA418E03C4C61775BAAF418D3322A755F3DB73068E186FB43F86B6E4E671"
+        }
+    ]
+}

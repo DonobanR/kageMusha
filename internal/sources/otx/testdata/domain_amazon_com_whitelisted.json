@@ -1,0 +1,170 @@
+{
+  "sections": [
+    "general",
+    "geo",
+    "url_list",
+    "passive_dns",
+    "malware",
+    "whois",
+    "http_scans"
+  ],
+  "whois": "http://whois.domaintools.com/amazon.com",
+  "alexa": "http://www.alexa.com/siteinfo/amazon.com",
+  "indicator": "amazon.com",
+  "type": "domain",
+  "type_title": "Domain",
+  "validation": [
+    {
+      "source": "akamai",
+      "message": "Akamai rank: #29",
+      "name": "Akamai Popular Domain"
+    },
+    {
+      "source": "alexa",
+      "message": "Alexa rank: #10",
+      "name": "Listed on Alexa"
+    },
+    {
+      "source": "majestic",
+      "message": "Whitelisted domain amazon.com",
+      "name": "Whitelisted domain"
+    },
+    {
+      "source": "whitelist",
+      "message": "Whitelisted domain amazon.com",
+      "name": "Whitelisted domain"
+    }
+  ],
+  "base_indicator": {
+    "id": 971831,
+    "indicator": "amazon.com",
+    "type": "domain",
+    "title": "",
+    "description": "",
+    "content": "",
+    "access_type": "public",
+    "access_reason": ""
+  },
+  "pulse_info": {
+    "count": 50,
+    "pulses": [
+      {
+        "id": "628dff37032808c7c9e014dc",
+        "name": "Sauron - Malware Domain Feed V2",
+        "description": "Command and Control domains for Sauron. These domains are extracted from a number of sources, and are suspicious.",
+        "modified": "2026-11-20T17:38:45.626000",
+        "created": "2022-05-25T10:04:39.623000",
+        "tags": [],
+        "references": [],
+        "public": 1,
+        "adversary": "",
+        "targeted_countries": [],
+        "malware_families": [],
+        "attack_ids": [],
+        "industries": [],
+        "TLP": "white",
+        "cloned_from": null,
+        "export_count": 177412,
+        "upvotes_count": 0,
+        "downvotes_count": 0,
+        "votes_count": 0,
+        "locked": false,
+        "pulse_source": "api",
+        "validator_count": 0,
+        "comment_count": 0,
+        "follower_count": 0,
+        "vote": 0,
+        "author": {
+          "username": "otxrobottwo",
+          "id": "78495",
+          "avatar_url": "/otxapi/users/avatar_image/media/avatars/user_78495/resized/80/avatar_ba5a8acdbd.png",
+          "is_subscribed": false,
+          "is_following": false
+        },
+        "indicator_type_counts": {
+          "hostname": 50899,
+          "domain": 87874
+        },
+        "indicator_count": 138773,
+        "is_author": false,
+        "is_subscribing": null,
+        "subscriber_count": 1636,
+        "modified_text": "7 hours ago ",
+        "is_modified": true,
+        "groups": [],
+        "in_group": false,
+        "threat_hunter_scannable": false,
+        "threat_hunter_has_agents": 1,
+        "related_indicator_type": "domain",
+        "related_indicator_is_active": 1
+      },
+      {
+        "id": "5fa1852d337eca8e99c2ec32",
+        "name": "Malware - Malware Domain Feed V2 - November 03 2020",
+        "description": "Command and Control domains for Malware. These domains are extracted from a number of sources, and are suspicious.",
+        "modified": "2026-11-20T16:13:58.986000",
+        "created": "2020-11-03T16:28:29.011000",
+        "tags": [],
+        "references": [],
+        "public": 1,
+        "adversary": "",
+        "targeted_countries": [],
+        "malware_families": [],
+        "attack_ids": [],
+        "industries": [],
+        "TLP": "white",
+        "cloned_from": null,
+        "export_count": 718726,
+        "upvotes_count": 0,
+        "downvotes_count": 0,
+        "votes_count": 0,
+        "locked": false,
+        "pulse_source": "api",
+        "validator_count": 0,
+        "comment_count": 3,
+        "follower_count": 0,
+        "vote": 0,
+        "author": {
+          "username": "otxrobottwo",
+          "id": "78495",
+          "avatar_url": "/otxapi/users/avatar_image/media/avatars/user_78495/resized/80/avatar_ba5a8acdbd.png",
+          "is_subscribed": false,
+          "is_following": false
+        },
+        "indicator_type_counts": {
+          "hostname": 54986,
+          "domain": 83007
+        },
+        "indicator_count": 137993,
+        "is_author": false,
+        "is_subscribing": null,
+        "subscriber_count": 1807,
+        "modified_text": "8 hours ago ",
+        "is_modified": true,
+        "groups": [],
+        "in_group": false,
+        "threat_hunter_scannable": false,
+        "threat_hunter_has_agents": 1,
+        "related_indicator_type": "domain",
+        "related_indicator_is_active": 1
+      }
+    ],
+    "references": [
+      "http://msoid.blackbagtech.com/ \u2022 http://scm-devtest-001.blackbagtech.com/",
+      "Matches rule Linux_Trojan_Mirai_389ee3e9 from ruleset Linux_Trojan_Mirai by Elastic Security"
+    ],
+    "related": {
+      "alienvault": {
+        "adversary": [],
+        "malware_families": [],
+        "industries": []
+      },
+      "other": {
+        "adversary": [],
+        "malware_families": [],
+        "industries": []
+      }
+    }
+  },
+  "false_positive": []
+}

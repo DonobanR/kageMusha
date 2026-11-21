@@ -1,0 +1,55 @@
+{
+    "query_status": "ok",
+    "data": [
+        {
+            "id": "1840194",
+            "ioc": "162.243.103.246:8443",
+            "threat_type": "botnet_cc",
+            "threat_type_desc": "Indicator that identifies a botnet command&control server (C&C)",
+            "ioc_type": "ip:port",
+            "ioc_type_desc": "ip:port combination that is used for botnet Command&control (C&C)",
+            "malware": "win.cobalt_strike",
+            "malware_printable": "Cobalt Strike",
+            "malware_alias": "Agentemis,BEACON,CobaltStrike,cobeacon",
+            "malware_malpedia": "https:\/\/malpedia.caad.fkie.fraunhofer.de\/details\/win.cobalt_strike",
+            "confidence_level": 90,
+            "is_compromised": false,
+            "first_seen": "2026-06-30 04:49:59 UTC",
+            "last_seen": null,
+            "reference": null,
+            "reporter": "Erebu",
+            "sightings": 1,
+            "tags": [
+                "c2",
+                "erebus-v14",
+                "nation-state-hunter",
+                "t1059_003",
+                "t1105"
+            ],
+            "malware_samples": []
+        },
+        {
+            "id": "794947",
+            "ioc": "162.243.103.246:8080",
+            "threat_type": "botnet_cc",
+            "threat_type_desc": "Indicator that identifies a botnet command&control server (C&C)",
+            "ioc_type": "ip:port",
+            "ioc_type_desc": "ip:port combination that is used for botnet Command&control (C&C)",
+            "malware": "win.emotet",
+            "malware_printable": "Emotet",
+            "malware_alias": "Geodo,Heodo",
+            "malware_malpedia": "https:\/\/malpedia.caad.fkie.fraunhofer.de\/details\/win.emotet",
+            "confidence_level": 75,
+            "is_compromised": false,
+            "first_seen": "2022-07-04 17:46:38 UTC",
+            "last_seen": "2026-05-24 06:26:15 UTC",
+            "reference": "https:\/\/bazaar.abuse.ch\/sample\/6fc29cee6754fe79ad16a2d1df7eccd43798c9a1bf4dad634cbd7697700c154e\/",
+            "reporter": "abuse_ch",
+            "sightings": 303906,
+            "tags": [
+                "emotet"
+            ],
+            "malware_samples": []
+        }
+    ]
+}

@@ -1,0 +1,129 @@
+{
+  "validation": [],
+  "pulse_info": {
+    "count": 9,
+    "pulses": [
+      {
+        "id": "65b8bb62ff530ce345cb45ca",
+        "name": "Mirai Botnet IOCs - Part 3 - SEC-1275-1",
+        "tags": [
+          "mirai botnet",
+          "iocs",
+          "mirai"
+        ],
+        "created": "2024-01-30T09:03:30.708000",
+        "modified": "2024-02-29T09:03:06.058000",
+        "malware_families": []
+      },
+      {
+        "id": "65bea038ab710289ae05fb3c",
+        "name": "Mirai Botnet IOCs - Part 3 - SEC-1275-1. [Pulse copied from Gnostis]",
+        "tags": [
+          "mirai botnet",
+          "iocs",
+          "mirai"
+        ],
+        "created": "2024-02-03T20:21:12.820000",
+        "modified": "2024-02-29T09:03:06.058000",
+        "malware_families": []
+      },
+      {
+        "id": "652329b50dd9645c69adf49c",
+        "name": "IOCs - 20231081422 - ANIA Threat Feeds - IP Segment 4",
+        "tags": [],
+        "created": "2023-10-08T22:14:13.096000",
+        "modified": "2023-11-07T22:02:18.651000",
+        "malware_families": []
+      },
+      {
+        "id": "651dacae8e279c5c2188d0e1",
+        "name": "ACTIVIDAD MALICIOSA | Relacionado con MIRAI 04-10-2023",
+        "tags": [
+          "manipulation",
+          "n1tjj8evgo6",
+          "t1010"
+        ],
+        "created": "2023-10-04T18:19:26.720000",
+        "modified": "2023-11-03T18:00:37.660000",
+        "malware_families": [
+          {
+            "id": "Mirai (ELF)",
+            "display_name": "Mirai (ELF)",
+            "target": null
+          },
+          {
+            "id": "Mirai (Windows)",
+            "display_name": "Mirai (Windows)",
+            "target": null
+          }
+        ]
+      },
+      {
+        "id": "651bd05e727b41cbd415ec2d",
+        "name": "[GS-343] Mirai Botnet IOCs - SEC-1275-1",
+        "tags": [
+          "mirai botnet",
+          "iocs",
+          "mirai"
+        ],
+        "created": "2023-10-03T08:27:10.359000",
+        "modified": "2023-11-02T08:04:43.248000",
+        "malware_families": [
+          {
+            "id": "Mirai",
+            "display_name": "Mirai",
+            "target": null
+          }
+        ]
+      },
+      {
+        "id": "651b4edbbe65d3bf547909a0",
+        "name": "URLHaus data - 02-10-2023",
+        "tags": [
+          "32-bit",
+          "elf",
+          "mips"
+        ],
+        "created": "2023-10-02T23:14:35.047000",
+        "modified": "2023-11-01T23:03:26.400000",
+        "malware_families": []
+      },
+      {
+        "id": "63b0cd08478c346bcbf32bc7",
+        "name": "LCIA:HoneyNet:2023",
+        "tags": [
+          "tsec",
+          "tpot19",
+          "honeypot"
+        ],
+        "created": "2023-01-01T00:00:08.295000",
+        "modified": "2023-06-24T12:00:07.021000",
+        "malware_families": []
+      },
+      {
+        "id": "63d9aba4dde56976554053e2",
+        "name": "LCIA:HoneyNet:February 2023",
+        "tags": [
+          "tsec",
+          "tpot19",
+          "honeypot"
+        ],
+        "created": "2023-02-01T00:00:36.775000",
+        "modified": "2023-03-30T23:00:42.344000",
+        "malware_families": []
+      },
+      {
+        "id": "63b0cd077b1d5edcde80b34f",
+        "name": "LCIA:HoneyNet:January 2023",
+        "tags": [
+          "tsec",
+          "tpot19",
+          "honeypot"
+        ],
+        "created": "2023-01-01T00:00:07.509000",
+        "modified": "2023-03-02T23:03:02.478000",
+        "malware_families": []
+      }
+    ]
+  }
+}

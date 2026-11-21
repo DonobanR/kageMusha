@@ -1,0 +1,46 @@
+{
+  "query_status": "ok",
+  "md5_hash": "59ce0baba11893f90527fc951ac69912",
+  "sha256_hash": "4293c1d8574dc87c58360d6bac3daa182f64f7785c9d41da5e0741d2b1817fc7",
+  "file_type": "elf",
+  "file_size": "135784",
+  "signature": null,
+  "firstseen": "2020-09-27 22:50:05",
+  "lastseen": "2026-11-21 03:15:26",
+  "url_count": "761641",
+  "urlhaus_download": "https://urlhaus-api.abuse.ch/v1/download/4293c1d8574dc87c58360d6bac3daa182f64f7785c9d41da5e0741d2b1817fc7/",
+  "virustotal": null,
+  "imphash": null,
+  "ssdeep": "3072:phNlHuBafLeBtfCzpta8xlBIOdVo3/4sxLJ10xioP:p3lOYoaja8xzx/0wsxzSi2",
+  "tlsh": "E5D3128BEF36DC1ECF001EB226DA5B9E9C6D756B41CBF0A4B9C1818F13A01C97D52215",
+  "magika": null,
+  "urls": [
+    {
+      "url_id": "4072161",
+      "url": "http://182.119.206.134:54379/i",
+      "url_status": "online",
+      "urlhaus_reference": "https://urlhaus.abuse.ch/url/4072161/",
+      "filename": null,
+      "firstseen": "2026-11-21",
+      "lastseen": null
+    },
+    {
+      "url_id": "4072164",
+      "url": "http://42.224.125.216:39685/bin.sh",
+      "url_status": "online",
+      "urlhaus_reference": "https://urlhaus.abuse.ch/url/4072164/",
+      "filename": "bin.sh",
+      "firstseen": "2026-11-21",
+      "lastseen": null
+    },
+    {
+      "url_id": "4072157",
+      "url": "http://182.116.112.97:59841/i",
+      "url_status": "online",
+      "urlhaus_reference": "https://urlhaus.abuse.ch/url/4072157/",
+      "filename": null,
+      "firstseen": "2026-11-21",
+      "lastseen": null
+    }
+  ]
+}

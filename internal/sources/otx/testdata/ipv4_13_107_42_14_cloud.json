@@ -1,0 +1,105 @@
+{
+  "whois": "http://whois.domaintools.com/13.107.42.14",
+  "reputation": 0,
+  "indicator": "13.107.42.14",
+  "type": "IPv4",
+  "type_title": "IPv4",
+  "base_indicator": {
+    "id": 2121809011,
+    "indicator": "13.107.42.14",
+    "type": "IPv4",
+    "title": "",
+    "description": "",
+    "content": "",
+    "access_type": "public",
+    "access_reason": ""
+  },
+  "pulse_info": {
+    "count": 50,
+    "pulses": [
+      {
+        "id": "6abb55898b66dfc1e9c35ff4",
+        "name": "LinkedIN \u2022 Google Cloud IP Scheme | Server Hello with Downgrade Request",
+        "tags": [
+          "linkedin",
+          "eva lisa",
+          "experience"
+        ],
+        "created": "2026-09-29T06:07:05.387000"
+      },
+      {
+        "id": "6abaab066eb124a4f27efcfd",
+        "name": "elections[.]ab[.]ca - Apex Domains - 09.28.26",
+        "tags": [
+          "entity",
+          "please",
+          "javascript"
+        ],
+        "created": "2026-09-28T17:59:34.611000"
+      },
+      {
+        "id": "6916d97edb28b2616ffac3ab",
+        "name": "njRAT| BazarLoader| Darkside 2020 .Beware \u2022 WebToolbar \u2022 Qbot",
+        "tags": [
+          "whois record",
+          "ssl certificate",
+          "historical ssl"
+        ],
+        "created": "2025-11-14T07:25:50.524000"
+      }
+    ],
+    "references": [
+      "https://vtbehaviour.commondatastorage.googleapis.com/1a4c7d65e4e4fe97352001993e86890882c82c0706fed1c5d15559aac61722e1_CAPE%20Sandbox.html?GoogleAccessId=758681729565-rc7fgq07icj8c9dm2gi34a4cckv235v1@developer.gserviceaccount.com&Expires=1782401192&Signature=o3kN4kjqZjgrISqP2%2B2ohOMVgncdP3SZYEACQ8omOL3ThJQCyUilp6AGoU0VgSXtDYrQLWJi3y7fCpA3mZaWrAqKKzjkdFT8Yq5b2Hzt8ynNVKQ7nUtWx7vvMh0gvx1eTQsXCUn%2FQSc%2FW6Eg3XjtGv%2FCH%2F%2FM8dQN2sPojf4Wc%2FN0RRrGBp1HoS72GwO27mDZACGc6%2FGvsPQ9iBkO0Y2E2RG0FO0otpf5RuyvrYFOIFSgL4",
+      "https://www.virustotal.com/gui/collection/ebf04e16981a710fb972b7256ea7125a2e5220880975e4029af8daf295a05f70/community"
+    ],
+    "related": {
+      "alienvault": {
+        "adversary": [],
+        "malware_families": [],
+        "industries": []
+      },
+      "other": {
+        "adversary": [],
+        "malware_families": [],
+        "industries": []
+      }
+    }
+  },
+  "false_positive": [],
+  "validation": [
+    {
+      "source": "cloud",
+      "message": "In cloud provider range: provider=azure",
+      "name": "Cloud Provider IP range"
+    }
+  ],
+  "asn": "AS8068 microsoft corporation",
+  "city_data": true,
+  "city": null,
+  "region": null,
+  "continent_code": "NA",
+  "country_code3": "USA",
+  "country_code2": "US",
+  "subdivision": null,
+  "latitude": 37.751,
+  "postal_code": null,
+  "longitude": -97.822,
+  "accuracy_radius": 1000,
+  "country_code": "US",
+  "country_name": "United States of America",
+  "dma_code": 0,
+  "charset": 0,
+  "area_code": 0,
+  "flag_url": "/assets/images/flags/us.png",
+  "flag_title": "United States of America",
+  "sections": [
+    "general",
+    "geo",
+    "reputation",
+    "url_list",
+    "passive_dns",
+    "malware",
+    "nids_list",
+    "http_scans"
+  ]
+}

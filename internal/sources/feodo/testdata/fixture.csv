@@ -1,0 +1,7 @@
+# Feodo Tracker test fixture
+# Last updated: 2024-01-01 00:00:00 UTC
+#
+"first_seen_utc","dst_ip","dst_port","c2_status","last_online","malware"
+"2024-01-01 00:00:00","192.168.1.1","443","online","2024-01-02","Emotet"
+"2024-01-01 00:00:00","10.0.0.1","8080","offline","2024-01-02","QakBot"
+"2024-01-01 00:00:00","172.16.0.1","443","online","2024-01-02","BazarLoader"
