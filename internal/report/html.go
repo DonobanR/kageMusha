@@ -75,12 +75,12 @@ body{background:#12121f;overflow:hidden;font-family:-apple-system,BlinkMacSystem
 </div>
 <div id="t"></div>
 <div class="lg">
+<span><i style="background:#b03040"></i>Malicious</span>
+<span><i style="background:#c4722a"></i>Suspicious</span>
+<span><i style="background:#2a6a8a"></i>Benign</span>
 <span><i style="background:#4a4a5e"></i>Unknown</span>
-<span><i style="background:#2d6a3e"></i>Low</span>
-<span><i style="background:#8a7a2a"></i>Medium</span>
-<span><i style="background:#c4722a"></i>High</span>
-<span><i style="background:#b03040"></i>Critical</span>
-<span><i style="background:#8b3040"></i>Malware</span>
+<span><i style="background:#7a4a9a"></i>Malware family</span>
+<span style="color:#5a5a72">opacity = confidence</span>
 </div>
 <script>
 window.onload=function(){
@@ -106,18 +106,29 @@ ns.push(n);byId[n.id]=n;
 ls.push({s:o.source_ref,t:o.target_ref});
 }}
 
-function cc(n){
-if(n.tp==="malware")return{f:"#8b3040",s:"#6b2030"};
-var c=n.conf||0;
-if(c===0)return{f:"#4a4a5e",s:"#3d3d55"};
-if(c<=30)return{f:"#2d6a3e",s:"#245832"};
-if(c<=60)return{f:"#8a7a2a",s:"#6a5a1a"};
-if(c<=80)return{f:"#c4722a",s:"#a4521a"};
-return{f:"#b03040",s:"#902030"};
+function vk(n){
+var v=n.verdict||"unknown";
+if(v==="malicious-activity")return"malicious";
+if(v==="anomalous-activity")return"suspicious";
+return v;
 }
-function lvl(c){
-if(c===0)return"unknown";if(c<=30)return"low";
-if(c<=60)return"medium";if(c<=80)return"high";return"critical";
+function cc(n){
+if(n.tp==="malware")return{f:"#7a4a9a",s:"#5c3578"};
+var v=vk(n);
+if(v==="malicious")return{f:"#b03040",s:"#902030"};
+if(v==="suspicious")return{f:"#c4722a",s:"#a4521a"};
+if(v==="benign")return{f:"#2a6a8a",s:"#1d526e"};
+return{f:"#4a4a5e",s:"#3d3d55"};
+}
+function op(n){
+if(n.tp==="malware")return"0.9";
+return(0.5+0.5*Math.min(n.conf||0,100)/100).toFixed(2);
+}
+function kind(name){
+if(/^https?:\/\//i.test(name))return"URL";
+if(/^\d{1,3}(\.\d{1,3}){3}$/.test(name)||name.indexOf(":")>-1)return"IP";
+if(/^[a-f0-9]{32}$|^[a-f0-9]{40}$|^[a-f0-9]{64}$/i.test(name))return"Hash";
+return"Domain";
 }
 function esc(s){return(s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;")}
 function hexRgb(h){return parseInt(h.slice(1,3),16)+","+parseInt(h.slice(3,5),16)+","+parseInt(h.slice(5,7),16)}
@@ -160,7 +171,7 @@ var nodeEls=ns.map(function(n){
 var g=ce("g");g.style.cursor="pointer";
 var c=ce("circle");c.setAttribute("r",n.r);
 var col=cc(n);
-c.setAttribute("fill",col.f);c.setAttribute("opacity","0.9");
+c.setAttribute("fill",col.f);c.setAttribute("opacity",op(n));
 c.setAttribute("stroke",col.s);c.setAttribute("stroke-width","1");
 g.appendChild(c);
 var label=n.name;
@@ -198,13 +209,13 @@ return d?d.toISOString().slice(0,10):"—";
 function showPanel(n){
 var p=document.getElementById("p"),col=cc(n),h="";
 h+='<div class="ph"><div class="bg">';
-h+='<span class="bd bt">'+(n.tp==="indicator"?"IP":"Malware")+"</span>";
+h+='<span class="bd bt">'+(n.tp==="indicator"?kind(n.name):"Malware")+"</span>";
 if(n.tp==="indicator")h+='<span class="bd" style="background:rgba('+hexRgb(col.f)+',.15);color:'+col.f+'">'+n.conf+'/100</span>';
 h+='</div><div class="nm">'+esc(n.name)+"</div>";
-if(n.tp==="indicator")h+='<div class="sb">Confidence: '+lvl(n.conf)+". Scores are heuristic.</div>";
+if(n.tp==="indicator")h+='<div class="sb">Color = verdict, opacity = confidence. Scores are heuristic.</div>';
 h+="</div>";
 if(n.tp==="indicator"){
-var vl=n.verdict.replace(/-activity$/,"");
+var vl=vk(n);
 h+='<div class="sg"><div class="c"><div class="l">VERDICT</div><div class="v" style="color:'+col.f+'">'+esc(vl)+'</div></div>';
 h+='<div class="c"><div class="l">CONFIDENCE</div><div class="v" style="color:'+col.f+'">'+n.conf+'%</div></div></div>';
 h+='<div class="sg"><div class="c"><div class="l">FIRST SEEN</div><div class="v" style="color:#c8c8d8">'+firstSeen(n)+'</div></div>';
@@ -237,7 +248,7 @@ var n=ns[i];
 g.addEventListener("mouseenter",function(){
 var col=cc(n);
 var h='<div class="tn">'+esc(n.name)+"</div>";
-if(n.tp==="indicator")h+='<div class="tv">'+lvl(n.conf)+" ("+n.conf+"%)</div>";
+if(n.tp==="indicator")h+='<div class="tv">'+vk(n)+" ("+n.conf+"%)</div>";
 else h+='<div class="tv">Malware family</div>';
 tip.innerHTML=h;tip.style.display="block";
 });

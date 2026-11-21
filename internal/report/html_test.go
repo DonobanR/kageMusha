@@ -1,6 +1,9 @@
 package report
 
 import (
+	"os"
+	"os/exec"
+	"path/filepath"
 	"strings"
 	"testing"
 	"time"
@@ -120,5 +123,58 @@ func TestToHTMLNoMalware(t *testing.T) {
 	}
 	if !strings.Contains(s, "indicator") {
 		t.Error("HTML does not contain an indicator node")
+	}
+}
+
+// Regression: color was derived from confidence alone, so a benign IOC at
+// 95% was drawn red/"critical" and a one-anchor malicious (60%) yellow,
+// indistinguishable from a 35% suspicious. Color is now by verdict and
+// confidence only drives opacity.
+func TestToHTMLColorByVerdict(t *testing.T) {
+	out, err := ToHTML([]model.Result{{Target: "8.8.8.8", Type: model.TypeIPv4, Verdict: model.Benign, Confidence: 95}}, time.Now())
+	if err != nil {
+		t.Fatal(err)
+	}
+	h := string(out)
+	for _, want := range []string{
+		`if(v==="malicious")return{f:"#b03040"`,
+		`if(v==="suspicious")return{f:"#c4722a"`,
+		`if(v==="benign")return{f:"#2a6a8a"`,
+		`if(v==="malicious-activity")return"malicious"`,
+		`if(v==="anomalous-activity")return"suspicious"`,
+		`>Malicious</span>`, `>Suspicious</span>`, `>Benign</span>`,
+	} {
+		if !strings.Contains(h, want) {
+			t.Errorf("HTML missing %q", want)
+		}
+	}
+	if strings.Contains(h, `"#8a7a2a"`) {
+		t.Error("old confidence-based yellow still present")
+	}
+}
+
+// The embedded JS is a Go string nobody compiles: a stray quote silently
+// produced an empty graph (round 26). When node is installed, syntax-check it.
+func TestToHTMLScriptSyntax(t *testing.T) {
+	node, err := exec.LookPath("node")
+	if err != nil {
+		t.Skip("node not installed")
+	}
+	out, err := ToHTML([]model.Result{{Target: "1.2.3.4", Type: model.TypeIPv4, Verdict: model.Malicious, Confidence: 60}}, time.Now())
+	if err != nil {
+		t.Fatal(err)
+	}
+	h := string(out)
+	i := strings.Index(h, "<script>")
+	j := strings.LastIndex(h, "</script>")
+	if i < 0 || j < 0 {
+		t.Fatal("no <script> block")
+	}
+	f := filepath.Join(t.TempDir(), "graph.js")
+	if err := os.WriteFile(f, []byte(h[i+len("<script>"):j]), 0o644); err != nil {
+		t.Fatal(err)
+	}
+	if b, err := exec.Command(node, "--check", f).CombinedOutput(); err != nil {
+		t.Errorf("node --check failed: %v\n%s", err, b)
 	}
 }
